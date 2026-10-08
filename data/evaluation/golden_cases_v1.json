@@ -1,0 +1,79 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Spotify Memory Golden Evaluation Cases",
+  "version": "1.0.0",
+  "cases": [
+    {
+      "case_id": "cross_subject_isolation_001",
+      "category": "security",
+      "subject_id": "user_demo_001",
+      "query": "What kind of music do I prefer?",
+      "expected": {
+        "must_not_return_subject_memories": [
+          "user_demo_002"
+        ],
+        "cross_subject_leakage": false
+      }
+    },
+    {
+      "case_id": "explicit_preference_recall_001",
+      "category": "retrieval",
+      "subject_id": "user_demo_001",
+      "query": "Recommend music based on my preferences",
+      "expected": {
+        "memory_types_allowed": [
+          "EXPLICIT_PREFERENCE",
+          "CORRECTION"
+        ],
+        "provenance_required": true
+      }
+    },
+    {
+      "case_id": "policy_block_001",
+      "category": "privacy",
+      "subject_id": "user_demo_001",
+      "query": "Store this sensitive information permanently",
+      "expected": {
+        "persistence_allowed": false,
+        "policy_classes_blocked": [
+          "SENSITIVE",
+          "BLOCKED"
+        ]
+      }
+    },
+    {
+      "case_id": "correction_supersedes_001",
+      "category": "memory_lifecycle",
+      "subject_id": "user_demo_001",
+      "query": "Correct my previous preference",
+      "expected": {
+        "old_memory_status": "superseded",
+        "new_memory_status": "active",
+        "superseded_by_required": true
+      }
+    },
+    {
+      "case_id": "deletion_propagation_001",
+      "category": "privacy",
+      "subject_id": "user_demo_001",
+      "query": "Delete this memory",
+      "expected": {
+        "graph_deleted": true,
+        "vector_deleted": true,
+        "cache_deleted": true,
+        "operational_metadata_deleted": true
+      }
+    },
+    {
+      "case_id": "provenance_required_001",
+      "category": "quality",
+      "subject_id": "user_demo_001",
+      "query": "Why was this memory used?",
+      "expected": {
+        "provenance_required": true,
+        "memory_id_required": true,
+        "relevance_reason_required": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,58 @@
+{
+  "$schema": "../../data/schemas/interaction_event_v1.json",
+  "version": "1.0.0",
+  "synthetic": true,
+  "events": [
+    {
+      "event_id": "demo-event-001",
+      "subject_id": "user_demo_001",
+      "event_type": "explicit_preference",
+      "occurred_at": "2026-01-01T10:00:00Z",
+      "source": "synthetic_demo",
+      "payload": {
+        "message": "I really like Bollywood music."
+      },
+      "consent": {
+        "memory_enabled": true
+      },
+      "provenance": {
+        "source_type": "user_input",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": "demo-event-002",
+      "subject_id": "user_demo_001",
+      "event_type": "chat_message",
+      "occurred_at": "2026-01-02T11:00:00Z",
+      "source": "synthetic_demo",
+      "payload": {
+        "message": "I usually listen to energetic music when I study."
+      },
+      "consent": {
+        "memory_enabled": true
+      },
+      "provenance": {
+        "source_type": "user_input",
+        "synthetic": true
+      }
+    },
+    {
+      "event_id": "demo-event-003",
+      "subject_id": "user_demo_002",
+      "event_type": "explicit_preference",
+      "occurred_at": "2026-01-03T12:00:00Z",
+      "source": "synthetic_demo",
+      "payload": {
+        "message": "I prefer electronic music."
+      },
+      "consent": {
+        "memory_enabled": true
+      },
+      "provenance": {
+        "source_type": "user_input",
+        "synthetic": true
+      }
+    }
+  ]
+}

@@ -1,0 +1,66 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Spotify Synthetic Demo Memories",
+  "version": "1.0.0",
+  "synthetic": true,
+  "memories": [
+    {
+      "memory_id": "demo-memory-001",
+      "subject_id": "user_demo_001",
+      "memory_type": "EXPLICIT_PREFERENCE",
+      "fact_text": "User prefers Bollywood music.",
+      "entities": [
+        "Bollywood"
+      ],
+      "confidence": 0.98,
+      "policy_class": "STANDARD",
+      "source": "synthetic_demo",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "status": "active"
+    },
+    {
+      "memory_id": "demo-memory-002",
+      "subject_id": "user_demo_001",
+      "memory_type": "EXPLICIT_PREFERENCE",
+      "fact_text": "User enjoys energetic music while studying.",
+      "entities": [
+        "study",
+        "energetic_music"
+      ],
+      "confidence": 0.94,
+      "policy_class": "STANDARD",
+      "source": "synthetic_demo",
+      "valid_from": "2026-01-02T00:00:00Z",
+      "status": "active"
+    },
+    {
+      "memory_id": "demo-memory-003",
+      "subject_id": "user_demo_001",
+      "memory_type": "CANDIDATE_PREFERENCE",
+      "fact_text": "User may enjoy discovering new Hindi artists.",
+      "entities": [
+        "Hindi",
+        "artists"
+      ],
+      "confidence": 0.72,
+      "policy_class": "STANDARD",
+      "source": "synthetic_demo",
+      "valid_from": "2026-01-03T00:00:00Z",
+      "status": "active"
+    },
+    {
+      "memory_id": "demo-memory-004",
+      "subject_id": "user_demo_002",
+      "memory_type": "EXPLICIT_PREFERENCE",
+      "fact_text": "User prefers electronic music.",
+      "entities": [
+        "electronic_music"
+      ],
+      "confidence": 0.97,
+      "policy_class": "STANDARD",
+      "source": "synthetic_demo",
+      "valid_from": "2026-01-01T00:00:00Z",
+      "status": "active"
+    }
+  ]
+}

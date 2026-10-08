@@ -1,0 +1,55 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Spotify Memory Embedding Metadata",
+  "version": "1.0.0",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "embedding_id",
+    "memory_id",
+    "subject_id",
+    "model",
+    "dimension",
+    "created_at"
+  ],
+  "properties": {
+    "embedding_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "memory_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "subject_id": {
+      "type": "string",
+      "minLength": 1
+    },
+    "model": {
+      "type": "string",
+      "minLength": 1
+    },
+    "dimension": {
+      "type": "integer",
+      "minimum": 1
+    },
+    "distance_metric": {
+      "type": "string",
+      "enum": [
+        "cosine",
+        "dot",
+        "euclidean"
+      ]
+    },
+    "source_text_hash": {
+      "type": "string"
+    },
+    "created_at": {
+      "type": "string",
+      "format": "date-time"
+    },
+    "metadata_version": {
+      "type": "string"
+    }
+  }
+}

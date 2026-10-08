@@ -13,3 +13,10 @@ uvicorn==0.32.1
 python-multipart==0.0.17
 tavily-python
 kafka-python==2.0.2
+psycopg[binary]==3.2.3
+redis==5.2.1
+prometheus-client==0.21.1
+opentelemetry-api==1.28.2
+opentelemetry-sdk==1.28.2
+opentelemetry-instrumentation-fastapi==0.49b2
+opentelemetry-exporter-otlp==1.28.2
